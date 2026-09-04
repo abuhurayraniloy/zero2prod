@@ -1,0 +1,220 @@
+{
+  "nodes": [
+    {
+      "id": "src_lib",
+      "label": "lib.rs",
+      "file_type": "code",
+      "source_file": "src/lib.rs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_lib_health_check",
+      "label": "health_check()",
+      "file_type": "code",
+      "source_file": "src/lib.rs",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "httpresponse",
+      "label": "HttpResponse",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_lib_run",
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "src/lib.rs",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_lib_rs_result",
+      "label": "Result",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_main",
+      "label": "main.rs",
+      "file_type": "code",
+      "source_file": "src/main.rs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_main_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src/main.rs",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_main_rs_result",
+      "label": "Result",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_health_check",
+      "label": "health_check.rs",
+      "file_type": "code",
+      "source_file": "tests/health_check.rs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_health_check_health_check_works",
+      "label": "health_check_works()",
+      "file_type": "code",
+      "source_file": "tests/health_check.rs",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_health_check_spawn_app",
+      "label": "spawn_app()",
+      "file_type": "code",
+      "source_file": "tests/health_check.rs",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_health_check_rs_result",
+      "label": "Result",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    }
+  ],
+  "edges": [
+    {
+      "source": "src_lib",
+      "target": "actix_web",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib.rs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "src_lib",
+      "target": "src_lib_health_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib.rs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_health_check",
+      "target": "httpresponse",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib.rs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "src_lib",
+      "target": "src_lib_run",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib.rs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_run",
+      "target": "src_lib_rs_result",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib.rs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "src_main",
+      "target": "run",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.rs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "src_main",
+      "target": "src_main_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.rs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_main",
+      "target": "src_main_rs_result",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.rs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "tests_health_check",
+      "target": "tests_health_check_health_check_works",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/health_check.rs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_health_check",
+      "target": "tests_health_check_spawn_app",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/health_check.rs",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_health_check_spawn_app",
+      "target": "tests_health_check_rs_result",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/health_check.rs",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "return_type"
+    },
+    {
+      "source": "tests_health_check_health_check_works",
+      "target": "tests_health_check_spawn_app",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/health_check.rs",
+      "source_location": "L10",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
